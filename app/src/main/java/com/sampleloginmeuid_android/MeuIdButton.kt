@@ -1,3 +1,4 @@
+// TODO: ("Update with your package path")
 package com.sampleloginmeuid_android
 
 import android.content.Context
@@ -93,7 +94,7 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
     private fun setBtnClickListener() {
         setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("meuid://meuid?action=MEUID_AUTHENTICATION&applicationId=$applicationId&parameters=eyJvcmlnaW4iOiAiTU9CSUxFIiwgInNlc3Npb24iOiAidGVzdCJ9")
+            intent.data = Uri.parse("meuid://meuid?action=MEUID_AUTHENTICATION&applicationId=$applicationId&parameters=eyJvcmlnaW4iOiJNT0JJTEVfQVBQIn0%3D")
             if (isSafeToCall(intent).not()) {
                 intent.data = Uri.parse("https://play.google.com/store/apps/details?id=com.meuid")
             }
@@ -110,7 +111,7 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
 
     companion object {
         // TODO: ("Enter your application ID here!")
-        const val applicationId = "[YOUR_APP_ID]"
+        const val applicationId = "{YOUR_APP_ID}"
 
         // TODO: ("Set button style") -> options: "button_dark" / "button_light" / "button_light_outline"
         const val buttonStyle = "button_dark"
