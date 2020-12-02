@@ -17,16 +17,17 @@ _**`bg_meuid_btn_light_outline.xml`**_
 
 _**`ic_meuid_logo_dark.xml`**_
 
-_**`ic_meuid_logo_light.xml`**_
-
 _**`ic_meuid_text_dark.xml`**_
 
+_**`ic_meuid_logo_light.xml`**_
+
+_**`ic_meuid_text_light.xml`**_
 
 ### 2). Criar _Custom View_ e setar parâmetros:
 #### 2.a). Crie uma CustomView _`MeuIdButton.kt`_ com o seguinte código:
 #### _**`MeuIdButton.kt`**_
 ```kotlin
-// TODO: (“Updtade with your package path”)
+// TODO: (“Update with your package path”)
 package com.sampleloginmeuid_android
 
 import android.content.Context
@@ -181,7 +182,7 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
 
 #### 2.c). Atualize também o _package path_ na classe _`MeuIdButton.kt`_ de acordo com o _package path_ do seu app:
 ```kotlin
-// TODO: (“Updtade with your package path”)
+// TODO: (“Update with your package path”)
 package com.sampleloginmeuid_android
 ```
 ### 3). Inserir _Custom View_ no layout da activity/fragment
@@ -215,7 +216,7 @@ package com.sampleloginmeuid_android
 
 **Importante:** No código acima, substitua:
 * `.HomeActivity` pela activity do seu app que irá tratar o deeplink recebido;
-* `{YOUR_APP_ID}` pelo seu _**applicationId**_
+* `{YOUR_APP_ID}` pelo seu _**applicationID**_
 
 ### 5). Obter os parâmetros da query do deeplink enviado pelo meuID
 #### 5.a) Na activity que irá receber o deeplink (configurado no passo anterior) extraia os parâmetros da query enviada pelo meuID utilizando o código abaixo dentro do método `onCreate`:
