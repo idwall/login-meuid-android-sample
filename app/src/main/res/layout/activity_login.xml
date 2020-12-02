@@ -7,6 +7,7 @@
     android:background="@android:color/white"
     tools:context=".LoginActivity">
 
+    <!-- TODO: ("Update with your MeuIdButton package path") -->
     <com.sampleloginmeuid_android.MeuIdButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
