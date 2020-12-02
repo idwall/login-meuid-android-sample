@@ -8,7 +8,7 @@
 * Obter os parâmetros da query do deeplink enviado pelo meuID.
 
 ### 1). Arquivos de configuração
-#### 1.a) Baixe [aqui](https://gitlab.idwall.space/mobile/android/sampleloginmeuid-android/-/tree/master/app/src/main/res/drawable) os arquivos abaixo e adicione-os na sua pasta _drawable_:
+#### 1.a) Baixe [aqui](https://gitlab.idwall.space/mobile/android/sampleloginmeuid-android/-/tree/master/app/src/main/res/drawable) os arquivos relacionados abaixo e adicione-os na sua pasta _drawable_ :
 _**`bg_meuid_btn_dark.xml`**_
 
 _**`bg_meuid_btn_light.xml`**_
@@ -161,6 +161,24 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
        // TODO: ("Set button size") -> options: "default" / "small"
        const val buttonSize = "default"
 ```
+
+* **Insira sua applicationID**
+* **Escolha entre 3 estilos (dark/light outline/light) e 2 tamanhos (default/small) de botão:**
+
+##### _dark_
+![alt text](assets/button_dark.png "button_dark")
+
+##### _light outline_
+![alt text](assets/button_light_outline.png "button_light_outline")
+
+##### _light_
+![alt text](assets/button_light.png "button_light")
+
+##### _dark small_
+![alt text](assets/button_dark_small.png "button_dark small")
+
+
+
 #### 2.c). Atualize também o _package path_ na classe _`MeuIdButton.kt`_ de acordo com o _package path_ do seu app:
 ```kotlin
 // TODO: (“Updtade with your package path”)
@@ -175,7 +193,7 @@ package com.sampleloginmeuid_android
    android:layout_width="wrap_content"
    android:layout_height="wrap_content" />
 ```
-**Obs:** Atualize o trecho `com.sampleloginmeuid_android` acima com o _package path_ onde se encontra a classe _`MeuIdButton.kt`_ no seu app
+**Importante:** Atualize o trecho `com.sampleloginmeuid_android` acima com o _package path_ onde se encontra a classe _`MeuIdButton.kt`_ no seu app
 
 ### 4). Setar _**`androidManifest.xml`**_ para receber resposta do meuID
 #### 4.a). Para poder receber a resposta do meuID para a solicitação realizada, insira o código abaixo no seu arquivo _**`androidManifest.xml`**_:
@@ -195,7 +213,7 @@ package com.sampleloginmeuid_android
 </activity>
 ``` 
 
-**Obs:** No código acima, substitua:
+**Importante:** No código acima, substitua:
 * `.HomeActivity` pela activity do seu app que irá tratar o deeplink recebido;
 * `{YOUR_APP_ID}` pelo seu _**applicationId**_
 
