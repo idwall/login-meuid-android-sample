@@ -13,7 +13,7 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="120dp"
         android:gravity="center"
-        android:text="Parabéns!\nseu login foi aprovado pelo\nMeuID"
+        android:text="Parabéns!\nvocê autorizou seus dados\ncom sucesso!"
         android:textColor="#5500ff"
         android:textSize="24sp"
         android:textStyle="bold"

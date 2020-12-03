@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Update {YOUR_APP_ID} with your applicationID -->
+<!DOCTYPE resources [<!ENTITY applicationId "{YOUR_APP_ID}">]>
+<resources>
+    <string name="meuid_application_id">&applicationId;</string>
+    <string name="meuid_scheme">meuid-&applicationId;</string>
+</resources>

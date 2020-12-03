@@ -93,6 +93,7 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
 
     private fun setBtnClickListener() {
         setOnClickListener {
+            val applicationId = context.resources.getString(R.string.meuid_application_id)
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("meuid://meuid?action=MEUID_AUTHENTICATION&applicationId=$applicationId&parameters=eyJvcmlnaW4iOiJNT0JJTEVfQVBQIn0%3D")
             if (isSafeToCall(intent).not()) {
@@ -110,9 +111,6 @@ class MeuIdButton(context: Context, attrs: AttributeSet? = null) : AppCompatButt
     }
 
     companion object {
-        // TODO: ("Enter your application ID here!")
-        const val applicationId = "{YOUR_APP_ID}"
-
         // TODO: ("Set button style") -> options: "button_dark" / "button_light" / "button_light_outline"
         const val buttonStyle = "button_dark"
 

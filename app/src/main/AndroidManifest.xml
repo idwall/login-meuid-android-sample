@@ -29,10 +29,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <!--TODO: ("Enter your applicationID here!")-->
                 <data
                     android:host="authorize"
-                    android:scheme="meuid-{YOUR_APP_ID}" />
+                    android:scheme="@string/meuid_scheme" />
             </intent-filter>
         </activity>
 

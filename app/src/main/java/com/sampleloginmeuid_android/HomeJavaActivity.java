@@ -13,15 +13,17 @@ public class HomeJavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Uri deeplink = getIntent().getData();
-        String code = deeplink.getQueryParameter("code");
-        String codeVerifier = deeplink.getQueryParameter("code_verifier");
+        if (getIntent().getData() != null) {
+            Uri deeplink = getIntent().getData();
+            String code = deeplink.getQueryParameter("code");
+            String codeVerifier = deeplink.getQueryParameter("code_verifier");
 
-        // Handle parameters here...
-        TextView codeTextView = findViewById(R.id.code);
-        TextView codeVerifierTextView = findViewById(R.id.codeVerifier);
+            // Handle parameters here...
+            TextView codeTextView = findViewById(R.id.code);
+            TextView codeVerifierTextView = findViewById(R.id.codeVerifier);
 
-        codeTextView.setText("code = " + code);
-        codeVerifierTextView.setText("code_verifier = " + codeVerifier);
+            codeTextView.setText("code = " + code);
+            codeVerifierTextView.setText("code_verifier = " + codeVerifier);
+        }
     }
 }
