@@ -10,9 +10,9 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        intent?.data?.apply {
-            val code = getQueryParameter("code")
-            val codeVerifier = getQueryParameter("code_verifier")
+        intent?.data?.let {
+            val code = it.getQueryParameter("code")
+            val codeVerifier = it.getQueryParameter("code_verifier")
 
             // Handle parameters here...
             findViewById<TextView>(R.id.code).text = "code = $code"
