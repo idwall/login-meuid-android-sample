@@ -13,7 +13,7 @@
 
 **6.** Inserir _custom view_  (_**`MeuIdButton.kt`**_)  no layout da activity/fragment;
 
-**7.** Setar _**`androidManifest.xml`**_ para receber resposta do meuID;
+**7.** Setar _**`AndroidManifest.xml`**_ para receber resposta do meuID;
 
 **8.** Obter os parâmetros da query do deeplink retornado pelo meuID;
 
@@ -250,7 +250,7 @@ ___
         </activity>
 ``` 
 
-**Importante:** No código acima, substitua `.HomeActivity` pela activity do seu app que irá tratar o deeplink recebido;
+**Importante:** No código acima, substitua `.HomeActivity` pela activity do seu app que irá tratar o deeplink recebido
 
 ___
 
@@ -258,7 +258,7 @@ ___
 #### 8.a) Na activity que irá receber o deeplink (configurado no passo anterior) extraia os parâmetros da query enviada pelo meuID utilizando o código abaixo dentro do método `onCreate`:
 _**Kotlin**_
 ```kotlin
-        intent?.data?.apply {
+        intent?.data?.let {
             val code = getQueryParameter("code")
             val codeVerifier = getQueryParameter("code_verifier")
 
@@ -276,6 +276,7 @@ _**Java**_
         }
 ```
 
+**Importante:** Os parâmetros `code` e `code_verifier` extraídos deste deeplink serão utilizados no passo seguinte para coletar as informações autorizadas pelo usuário
 ___
 
 ### 9). Configurar requisições para o backend
