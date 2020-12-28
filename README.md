@@ -280,5 +280,5 @@ _**Java**_
 ___
 
 ### 9). Configurar requisições para o backend
-#### 9.a) Clique [aqui](https://documenter.getpostman.com/view/3977334/SzYUa21Q?version=latest) para dar prosseguimento à configuração das requisições para o backend
+#### 9.a) Clique <a href="https://documenter.getpostman.com/view/3977334/SzYUa21Q?version=latest#73eeb643-67ba-48a6-b450-670dfc041851" target="_blank">aqui</a> para dar prosseguimento à configuração das requisições para o backend
 
